@@ -18,9 +18,31 @@ class PatientScreen extends StatefulWidget {
   State<PatientScreen> createState() => _PatientScreenState();
 }
 
-class _PatientScreenState extends State<PatientScreen> {
+class _PatientScreenState extends State<PatientScreen> with WidgetsBindingObserver {
   final navigationKey = GlobalKey<CurvedNavigationBarState>();
   int index = 0;
+   @override void initState() {
+    // TODO: implement initState
+    WidgetsBinding.instance!.addObserver(this);
+    super.initState();
+  }
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if(state == AppLifecycleState.resumed){
+      setState(() {
+        widget.patient.activityStatus = true;
+      PatientService.update(widget.patient);
+      });
+      
+    }else{
+      setState(() {
+        widget.patient.activityStatus = false;
+      PatientService.update(widget.patient);
+      });
+      
+    }
+    super.didChangeAppLifecycleState(state);
+  }
   @override
   Widget build(BuildContext context) {
     final screens = [
