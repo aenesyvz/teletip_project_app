@@ -67,7 +67,7 @@ class _PatientMessageState extends State<PatientMessage> {
                                                                                   ),
                                                   )
                         else if(isLoading)
-                          Expanded(child: Center(child: Text("Veriler geliyor",style: TextStyle(color: Colors.grey)),)),
+                          const Expanded(child: Center(child: Text("Veriler geliyor",style: TextStyle(color: Colors.grey)),)),
                               
           const SizedBox(height: 50,)
         ],

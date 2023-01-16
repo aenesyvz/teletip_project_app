@@ -18,7 +18,7 @@ class PatientProfile extends StatefulWidget {
 }
 
 class _PatientProfileState extends State<PatientProfile> {
-  final _formKeyForProfile = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
   String? newEmail;
   String? newFirstName;
   String? newLastName;
@@ -63,7 +63,7 @@ class _PatientProfileState extends State<PatientProfile> {
 
   Form formProfile(BuildContext context) {
     return Form(
-              key: _formKeyForProfile,
+              key: _formKey,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -192,8 +192,8 @@ class _PatientProfileState extends State<PatientProfile> {
                         text:"Profilimi güncelle",
                        
                         press: () {
-                          if (_formKeyForProfile.currentState!.validate()) {
-                            _formKeyForProfile.currentState!.save();
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState!.save();
                             
                             Patient updatedPatient = createPatientModel();
                             

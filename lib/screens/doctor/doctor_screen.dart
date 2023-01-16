@@ -46,7 +46,11 @@ class _DoctorScreenState extends State<DoctorScreen> with WidgetsBindingObserver
     }
     super.didChangeAppLifecycleState(state);
   }
-
+   @override
+  void dispose() {
+    WidgetsBinding.instance!.removeObserver(this);
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     final screens = [

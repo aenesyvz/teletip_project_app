@@ -25,7 +25,12 @@ class PatientMessageScreen extends StatefulWidget {
 class _PatientMessageScreenState extends State<PatientMessageScreen> {
   String messageTxt = "";
   bool isDeleted = false;
-
+  // late Message newMessage;
+  //  @override void initState() {
+  //   // TODO: implement initState
+  //   newMessage = createdNewMessage();
+  //   super.initState();
+  // }
   @override
   Widget build(BuildContext context) {
       return Scaffold(
@@ -167,7 +172,7 @@ class _PatientMessageScreenState extends State<PatientMessageScreen> {
       ),
     );
   }
-
+  Message createdNewMessage() => Message(-1, -1, -1, "", "", "", DateTime.now(), null);
 
   Message createNewMessageModel() {
     return Message(
