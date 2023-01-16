@@ -23,10 +23,6 @@ class DoctorService {
     return await http.get(Uri.parse(newPath + "/login/email/$email/password/$password"),headers: Environment.HEADERS );
   }
 
-   static Future getAllByEmail(String email)async {
-    return await http.get(Uri.parse(newPath + "/getbyemail/$email"),headers: Environment.HEADERS);
-  }
-
   static Future getAllByFirstName(String firstName)async {
     return await http.get(Uri.parse(newPath + "/getbyfirstname/$firstName"),headers: Environment.HEADERS);
   }

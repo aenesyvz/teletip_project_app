@@ -4,6 +4,7 @@ import 'package:collection/collection.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:teletip_project_app/components/custom_suffix_icon.dart';
 import 'package:teletip_project_app/components/default_button.dart';
 import 'package:teletip_project_app/models/doctor.dart';
 import 'package:teletip_project_app/models/doctor_specialty.dart';
@@ -111,6 +112,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
+                          keyboardType: TextInputType.emailAddress,
                             decoration:  InputDecoration(
                             labelText: "Email Adresiniz",
                             floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -132,6 +134,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
+                          keyboardType: TextInputType.phone,
                             decoration:  InputDecoration(
                                floatingLabelBehavior: FloatingLabelBehavior.always,
                               suffixIcon: Padding(
@@ -156,9 +159,14 @@ class _DoctorProfileState extends State<DoctorProfile> {
                               
                                floatingLabelBehavior: FloatingLabelBehavior.always,
                               suffixIcon: Padding(
-                                padding: const EdgeInsets.only(right:8.0),
-                                child: Icon(Icons.home,color:Colors.blue.shade900,),
-                              ),
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_balance_outlined,color: Colors.blue.shade900,),
+                            ),
                                 labelText: "Hastane Ya da Klinik Adresi",),
                         initialValue: widget.doctor.hospital,
             
@@ -176,9 +184,14 @@ class _DoctorProfileState extends State<DoctorProfile> {
                             decoration:  InputDecoration(
                                floatingLabelBehavior: FloatingLabelBehavior.always,
                               suffixIcon: Padding(
-                                padding: const EdgeInsets.only(right:8.0),
-                                child: Icon(Icons.phone,color:Colors.blue.shade900,),
-                              ),
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_balance_outlined,color: Colors.blue.shade900,),
+                            ),
                                 labelText: "Mezun Oldğunuz Fakülte",),
                         initialValue: widget.doctor.faculty,
             
@@ -193,12 +206,9 @@ class _DoctorProfileState extends State<DoctorProfile> {
                        Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
-                            decoration:  InputDecoration(
+                            decoration:  const InputDecoration(
                                floatingLabelBehavior: FloatingLabelBehavior.always,
-                              suffixIcon: Padding(
-                                padding: const EdgeInsets.only(right:8.0),
-                                child: Icon(Icons.phone,color:Colors.blue.shade900,),
-                              ),
+                              suffixIcon:   CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
                                 labelText: "Şifreniz",),
                         initialValue: widget.doctor.password,
             

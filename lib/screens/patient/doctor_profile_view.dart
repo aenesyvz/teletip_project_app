@@ -175,8 +175,8 @@ class _DoctorProfileViewState extends State<DoctorProfileView> {
               return ListTile(
               
                   isThreeLine: true,
-                  title: Text(selectedComment.title,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),),
-                  subtitle: Text(selectedComment.explation,style: const TextStyle(color: Colors.black)),
+                  title: Text(selectedComment.title,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),overflow: TextOverflow.ellipsis,),
+                  subtitle: Text(selectedComment.explation,style: const TextStyle(color: Colors.black),overflow: TextOverflow.ellipsis,),
                   trailing: const Icon(Icons.send_rounded,color: Colors.red,size: 30,),
               );
             }),
@@ -193,13 +193,13 @@ class _DoctorProfileViewState extends State<DoctorProfileView> {
 
   AppBar appBar(BuildContext context) {
     return AppBar(
-      title: const Text("Doktor Profil Sayfası",style: TextStyle(color: Colors.black),),
+      title:  Text("Doktor Profil Sayfası",style: TextStyle(color: Colors.blue.shade900),),
       leading: GestureDetector(
         onTap: (() {
          
          Navigator.pop(context);
         })
-        ,child: Icon(Icons.arrow_back_ios)),
+        ,child: Icon(Icons.arrow_back_ios,color: Colors.blue.shade900,)),
     );
   }
 

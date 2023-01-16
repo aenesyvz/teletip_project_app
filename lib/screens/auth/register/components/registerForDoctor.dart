@@ -99,7 +99,15 @@ class _DoctorForRegisterState extends State<DoctorForRegister> {
                         hintText: "Soyadınızı giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_circle,color: Colors.blue.shade900,),
+                            )
                       ),
                       onChanged: (value) {},
                    
@@ -111,13 +119,14 @@ class _DoctorForRegisterState extends State<DoctorForRegister> {
                       height: _height * 0.03,
                     ),
                       TextFormField(
+                        keyboardType: TextInputType.emailAddress,
                       decoration:  InputDecoration(
                         labelText: "Email",
                         labelStyle: TextStyle(color: kPrimaryColor),
                         hintText: "Email adresini giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                            const CustomSuffixIcon(svgIcon: "assets/icons/Mail.svg"),
                       ),
                       onChanged: (value) {},
                     
@@ -147,13 +156,22 @@ class _DoctorForRegisterState extends State<DoctorForRegister> {
                       height: _height * 0.03,
                     ), 
                     TextFormField(
+                      keyboardType: TextInputType.phone,
                       decoration:  InputDecoration(
                         labelText: "Telefon Numarası",
                         labelStyle: TextStyle(color: kPrimaryColor),
                         hintText: "Telefon Numaranızı giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                           Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.phone,color: Colors.blue.shade900,),
+                            )
                       ),
 
                       onChanged: (value) {},
@@ -197,7 +215,15 @@ class _DoctorForRegisterState extends State<DoctorForRegister> {
                         hintText: "Hastane ya da klinik Adresinizi giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_balance_outlined,color: Colors.blue.shade900,),
+                            )
                       ),
 
                       onChanged: (value) {},
@@ -216,7 +242,15 @@ class _DoctorForRegisterState extends State<DoctorForRegister> {
                         hintText: "Mezun olduğunuz fakülteyi giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                              Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_balance_outlined,color: Colors.blue.shade900,),
+                            )
                       ),
 
                       onChanged: (value) {},

@@ -51,7 +51,15 @@ class _PatientForRegisterState extends State<PatientForRegister> {
                         hintText: "İsminizi giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                              Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_circle_outlined,color: Colors.blue.shade900,),
+                            )
                       ),
 
                       onChanged: (value) {},
@@ -70,7 +78,15 @@ class _PatientForRegisterState extends State<PatientForRegister> {
                         hintText: "Soyadınızı giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                             Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_circle_outlined,color: Colors.blue.shade900,),
+                            )
                       ),
                       onChanged: (value) {},
                   
@@ -82,13 +98,14 @@ class _PatientForRegisterState extends State<PatientForRegister> {
                       height: _height * 0.03,
                     ),
                     TextFormField(
+                      keyboardType: TextInputType.emailAddress,
                       decoration:  InputDecoration(
                         labelText: "Email",
                         labelStyle: TextStyle(color: kPrimaryColor),
                         hintText: "Email adresinizi giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                            const CustomSuffixIcon(svgIcon: "assets/icons/Mail.svg"),
                       ),
                       onChanged: (value) {},
                     
@@ -118,13 +135,22 @@ class _PatientForRegisterState extends State<PatientForRegister> {
                       height: _height * 0.03,
                     ),
                     TextFormField(
+                      keyboardType: TextInputType.phone,
                       decoration:  InputDecoration(
                         labelText: "Telefon Numarası",
                         labelStyle: TextStyle(color: kPrimaryColor),
                         hintText: "Telefon numaranızı giriniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon:
-                            const CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.phone,color: Colors.blue.shade900,),
+                            )
                       ),
 
                       onChanged: (value) {},

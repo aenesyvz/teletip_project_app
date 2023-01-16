@@ -21,7 +21,7 @@ class DoctorMessage extends StatefulWidget {
 class _DoctorMessageState extends State<DoctorMessage> {
   List<Patient> patients = <Patient>[];
   List<Message> doctorMessages = <Message>[];
-    bool isEmpty= false;
+  bool isEmpty= false;
   bool isLoading = true;
    @override
   void initState() {

@@ -73,7 +73,10 @@ class _PatientCommentState extends State<PatientComment> {
                           labelStyle: TextStyle(color: kPrimaryColor),
                           hintText: "Yorum başlığı giriniz",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          suffixIcon: Icon(Icons.filter_tilt_shift_sharp,color:kPrimaryColor)
+                          suffixIcon: Padding(
+                            padding: const EdgeInsets.only(right:16.0),
+                            child: Icon(Icons.filter_tilt_shift_sharp,color:kPrimaryColor),
+                          )
                         ),
                         onChanged: (value) {},
                      
@@ -90,9 +93,9 @@ class _PatientCommentState extends State<PatientComment> {
                           labelStyle: TextStyle(color: kPrimaryColor),
                           hintText: "Açıklamanızı giriniz",
                           floatingLabelBehavior: FloatingLabelBehavior.always,
-                          suffixIcon:const Padding(
-                            padding: EdgeInsets.only(right:16.0),
-                            child: Icon(Icons.message_outlined),
+                          suffixIcon: Padding(
+                            padding: const EdgeInsets.only(right:16.0),
+                            child: Icon(Icons.message_outlined,color: kPrimaryColor,),
                           )
                         ),
                         onChanged: (value) {},
@@ -122,10 +125,10 @@ class _PatientCommentState extends State<PatientComment> {
       return AppBar(
         leading: GestureDetector(
             onTap: () => Navigator.pop(context),
-            child: Icon(Icons.arrow_back_ios_new, color: Colors.grey.shade700)),
+            child: Icon(Icons.arrow_back_ios_new, color: Colors.blue.shade900)),
         title: Text(
           "Yorum Yaz",
-          style: TextStyle(color: Colors.grey.shade700),
+          style: TextStyle(color: Colors.blue.shade900),
         ),
      
       );

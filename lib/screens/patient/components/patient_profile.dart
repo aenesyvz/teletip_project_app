@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:teletip_project_app/components/custom_suffix_icon.dart';
 import 'package:teletip_project_app/components/default_button.dart';
 import 'package:teletip_project_app/models/patient.dart';
 import 'package:teletip_project_app/services/patient_service.dart';
@@ -71,13 +72,13 @@ class _PatientProfileState extends State<PatientProfile> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
-                        decoration:  InputDecoration(
+                        keyboardType: TextInputType.emailAddress,
+                        decoration:  const InputDecoration(
                         labelText: "Email Adresiniz",
                         floatingLabelBehavior: FloatingLabelBehavior.always,
-                        suffixIcon: Padding(
-                          padding: const EdgeInsets.only(right:8.0),
-                          child: Icon(Icons.email,color:Colors.blue.shade900,),
-                        ),
+                        suffixIcon: 
+                          CustomSuffixIcon(svgIcon: "assets/icons/Mail.svg"),
+                        
                         ),
                          initialValue: widget.patient.email,
                         onChanged: (value) {},
@@ -94,10 +95,15 @@ class _PatientProfileState extends State<PatientProfile> {
                           decoration:  InputDecoration(
                         labelText: "Adınız",
                          floatingLabelBehavior: FloatingLabelBehavior.always,
-                        suffixIcon: Padding(
-                          padding: const EdgeInsets.only(right:8.0),
-                          child: Icon(Icons.person,color: Colors.blue.shade900,),
-                        ),
+                        suffixIcon:  Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_circle,color: Colors.blue.shade900,),
+                            )
                         ),
                          initialValue: widget.patient.firstName,
                         onChanged: (value) {},
@@ -115,9 +121,15 @@ class _PatientProfileState extends State<PatientProfile> {
                         labelText: "Soyadınız",
                          floatingLabelBehavior: FloatingLabelBehavior.always,
                         suffixIcon: Padding(
-                          padding: const EdgeInsets.only(right:8.0),
-                          child: Icon(Icons.person,color:Colors.blue.shade900,),
-                        ),),
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.account_circle,color: Colors.blue.shade900,),
+                            )
+                        ),
                          initialValue: widget.patient.lastName,
                         onChanged: (value) {},
                       
@@ -130,12 +142,18 @@ class _PatientProfileState extends State<PatientProfile> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
+                        keyboardType: TextInputType.phone,
                           decoration:  InputDecoration(
                             
                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                            suffixIcon: Padding(
-                              padding: const EdgeInsets.only(right:8.0),
-                              child: Icon(Icons.phone,color:Colors.blue.shade900,),
+                            suffixIcon:  Padding(
+                              padding: const EdgeInsets.fromLTRB(
+                              0,
+                              20,
+                              20,
+                              20,
+                            ),
+                              child: Icon(Icons.phone,color: Colors.blue.shade900,),
                             ),
                               labelText: "Telefon numaranız",),
                       initialValue: widget.patient.phoneNumber,
@@ -151,13 +169,10 @@ class _PatientProfileState extends State<PatientProfile> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: TextFormField(
-                          decoration:  InputDecoration(
+                          decoration:  const InputDecoration(
                             
                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                            suffixIcon: Padding(
-                              padding: const EdgeInsets.only(right:8.0),
-                              child: Icon(Icons.phone,color:Colors.blue.shade900,),
-                            ),
+                            suffixIcon:   CustomSuffixIcon(svgIcon: "assets/icons/Lock.svg"),
                               labelText: "Şifreniz",),
                       initialValue: widget.patient.password,
             

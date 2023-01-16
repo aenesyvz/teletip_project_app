@@ -70,10 +70,10 @@ class _DoctorScreenState extends State<DoctorScreen> with WidgetsBindingObserver
           extendBody: true,
           backgroundColor: Colors.white,
           appBar: AppBar(
-            leading:  Icon(Icons.arrow_back_ios_new,color:Colors.grey.shade700),
-            title:  Text(titles[index],style: TextStyle(color: Colors.grey.shade700),),
+            leading:  Icon(Icons.arrow_forward_ios_outlined,color:Colors.blue.shade900),
+            title:  Text(titles[index],style: TextStyle(color: Colors.blue.shade900),),
             elevation: 0,
-            centerTitle: true,
+            centerTitle: false,
             actions: [
               Padding(
                 padding: const EdgeInsets.only(right:32.0),
@@ -87,7 +87,7 @@ class _DoctorScreenState extends State<DoctorScreen> with WidgetsBindingObserver
                       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
                   },
                  
-                  child: Icon(Icons.logout_rounded,color: Colors.grey.shade700,size: 30,)),
+                  child: Icon(Icons.logout_rounded,color: Colors.blue.shade900,size: 30,)),
               )
             ],
           ),
