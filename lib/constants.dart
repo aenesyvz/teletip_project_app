@@ -1,4 +1,3 @@
-//Flutter Way
 import 'package:flutter/material.dart';
 
 

@@ -178,7 +178,6 @@ class _LoginFormState extends State<LoginForm> {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState!.save();
       if (status) {
-        //https://www.udemy.com/course/sifirdan-flutter-ile-android-ve-ios-apps-development/ 
         PatientService.login(email.toString(),password.toString()).then((res) {
            var data =json.decode(res.body)["data"];
            print(data);
@@ -193,7 +192,6 @@ class _LoginFormState extends State<LoginForm> {
                 }
         });
       } else {
-        //https://www.udemy.com/course/sifirdan-flutter-ile-android-ve-ios-apps-development/
         DoctorService.login(email.toString(),password.toString()).then((res) {
            var data =json.decode(res.body)["data"];
             if (data.isNotEmpty) {

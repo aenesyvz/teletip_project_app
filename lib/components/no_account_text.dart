@@ -1,4 +1,4 @@
-//Flutter Way
+
 import 'package:flutter/material.dart';
 import 'package:teletip_project_app/constants.dart';
 import 'package:teletip_project_app/screens/onboarding/onboarding_screen.dart';
